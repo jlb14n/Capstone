@@ -72,7 +72,7 @@ create table CAAsthmaData (
     YEAR int not null,
     NUM_ED_VISITS int not null,
     AGE_ADJ_ED_VISITS float not null,
-    AQ_ID int null,
+    AQ_ID int null unique,
     constraint fk_Asthma_AQ_ID
         foreign key (AQ_ID)
         references CAAirQualityDataCounty(AQ_ID)
