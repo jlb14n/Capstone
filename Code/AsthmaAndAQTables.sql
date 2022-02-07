@@ -15,8 +15,8 @@ create table CAAirQualityDataCounty (
     LEAD_99PERC FLOAT null,
     LEAD_STD float null,
     LEAD_2NDMAX FLOAT null,
-    LEAD_METHOD VARCHAR(100) null,
-    LEAD_METRIC VARCHAR(100) null,
+    LEAD_METHOD VARCHAR(250) null,
+    LEAD_METRIC VARCHAR(250) null,
     LEAD_UNITS VARCHAR(100) null,
 
     NO2_MEAN FLOAT null,
@@ -24,8 +24,8 @@ create table CAAirQualityDataCounty (
     NO2_99PERC FLOAT null,
     NO2_STD float null,
     NO2_2NDMAX FLOAT null,
-    NO2_METHOD VARCHAR(100) null,
-    NO2_METRIC VARCHAR(100) null,
+    NO2_METHOD VARCHAR(250) null,
+    NO2_METRIC VARCHAR(250) null,
     NO2_UNITS VARCHAR(100) null,
 
     OZONE_MEAN FLOAT null,
@@ -33,8 +33,8 @@ create table CAAirQualityDataCounty (
     OZONE_99PERC FLOAT null,
     OZONE_STD float null,
     OZONE_2NDMAX FLOAT null,
-    OZONE_METHOD VARCHAR(100) null,
-    OZONE_METRIC VARCHAR(100) null,
+    OZONE_METHOD VARCHAR(250) null,
+    OZONE_METRIC VARCHAR(250) null,
     OZONE_UNITS VARCHAR(100) null,
     
     PM10_MEAN FLOAT null,
@@ -42,8 +42,8 @@ create table CAAirQualityDataCounty (
     PM10_99PERC FLOAT null,
     PM10_STD float null,
     PM10_2NDMAX FLOAT null,
-    PM10_METHOD VARCHAR(100) null,
-    PM10_METRIC VARCHAR(100) null,
+    PM10_METHOD VARCHAR(250) null,
+    PM10_METRIC VARCHAR(250) null,
     PM10_UNITS VARCHAR(100) null,
         
     PM25_MEAN FLOAT null,
@@ -51,8 +51,8 @@ create table CAAirQualityDataCounty (
     PM25_99PERC FLOAT null,
     PM25_STD float null,
     PM25_2NDMAX FLOAT null,
-    PM25_METHOD VARCHAR(100) null,
-    PM25_METRIC VARCHAR(100) null,
+    PM25_METHOD VARCHAR(250) null,
+    PM25_METRIC VARCHAR(250) null,
     PM25_UNITS VARCHAR(100) null,
             
     SO2_MEAN FLOAT null,
@@ -60,8 +60,8 @@ create table CAAirQualityDataCounty (
     SO2_99PERC FLOAT null,
     SO2_STD float null,
     SO2_2NDMAX FLOAT null,
-    SO2_METHOD VARCHAR(100) null,
-    SO2_METRIC VARCHAR(100) null,
+    SO2_METHOD VARCHAR(250) null,
+    SO2_METRIC VARCHAR(250) null,
     SO2_UNITS VARCHAR(100) null,
 );
 
