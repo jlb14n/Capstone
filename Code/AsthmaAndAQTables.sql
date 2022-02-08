@@ -31,21 +31,23 @@ create table County(
 
 create table Method(
     METHOD_ID int primary key identity(1,1),
-    METHOD_NAME varchar(110) not null
+    METHOD_NAME varchar(110) null
     constraint uq_Method_MethodName
         unique (METHOD_NAME)
 );
 
 create table Metric(
     METRIC_ID int primary key identity(1,1),
-    METRIC_NAME varchar(68) not null
+    METRIC_NAME varchar(68) null
     constraint uq_Metric_MetricName
         unique (METRIC_NAME)
 );
 
 create table Unit(
     UNIT_ID int primary key identity(1,1),
-    UNIT_NAME varchar(29) not null
+    UNIT_NAME varchar(29) null
+    constraint uq_Unit_UnitName
+        unique (UNIT_NAME)
 );
 
 create table AirQualityDataCounty (
@@ -58,110 +60,110 @@ create table AirQualityDataCounty (
     LEAD_99PERC float null,
     LEAD_STD float null,
     LEAD_2NDMAX float null,
-    LEAD_METHOD int not null, --fk
-    LEAD_METRIC int not null, --fk
-    LEAD_UNITS int not null, --fk
+    LEAD_METHOD_ID int null, --fk
+    LEAD_METRIC_ID int null, --fk
+    LEAD_UNITS_ID int not null, --fk
 
     NO2_MEAN float null,
     NO2_1STMAX float null,
     NO2_99PERC float null,
     NO2_STD float null,
     NO2_2NDMAX float null,
-    NO2_METHOD int not null, --fk
-    NO2_METRIC int not null, --fk
-    NO2_UNITS int not null, --fk
+    NO2_METHOD_ID int not null, --fk
+    NO2_METRIC_ID int not null, --fk
+    NO2_UNITS_ID int not null, --fk
 
     OZONE_MEAN float null,
     OZONE_1STMAX float null,
     OZONE_99PERC float null,
     OZONE_STD float null,
     OZONE_2NDMAX float null,
-    OZONE_METHOD int not null, --fk
-    OZONE_METRIC int not null, --fk
-    OZONE_UNITS int not null, --fk
+    OZONE_METHOD_ID int not null, --fk
+    OZONE_METRIC_ID int not null, --fk
+    OZONE_UNITS_ID int not null, --fk
     
     PM10_MEAN float null,
     PM10_1STMAX float null,
     PM10_99PERC float null,
     PM10_STD float null,
     PM10_2NDMAX float null,
-    PM10_METHOD int not null, --fk
-    PM10_METRIC int not null, --fk
-    PM10_UNITS int not null, --fk
+    PM10_METHOD_ID int not null, --fk
+    PM10_METRIC_ID int not null, --fk
+    PM10_UNITS_ID int not null, --fk
         
     PM25_MEAN float null,
     PM25_1STMAX float null,
     PM25_99PERC float null,
     PM25_STD float null,
     PM25_2NDMAX float null,
-    PM25_METHOD int not null, --fk
-    PM25_METRIC int not null, --fk
-    PM25_UNITS int not null, --fk
+    PM25_METHOD_ID int not null, --fk
+    PM25_METRIC_ID int not null, --fk
+    PM25_UNITS_ID int not null, --fk
             
     SO2_MEAN float null,
     SO2_1STMAX float null,
     SO2_99PERC float null,
     SO2_STD float null,
     SO2_2NDMAX float null,
-    SO2_METHOD int not null, --fk
-    SO2_METRIC int not null, --fk
-    SO2_UNITS int not null, --fk
+    SO2_METHOD_ID int not null, --fk
+    SO2_METRIC_ID int not null, --fk
+    SO2_UNITS_ID int not null, --fk
     constraint fk_AirQualityDataCounty_CountyID
         foreign key (COUNTY_ID)
         references County(COUNTY_ID),
     constraint fk_AirQualityDataCounty_MethodID_LEAD
-        foreign key (LEAD_METHOD)
+        foreign key (LEAD_METHOD_ID)
         references Method(METHOD_ID),
     constraint fk_AirQualityDataCounty_MetricID_LEAD
-        foreign key (LEAD_METRIC)
+        foreign key (LEAD_METRIC_ID)
         references Metric(METRIC_ID),
     constraint fk_AirQualityDataCounty_UnitID_LEAD
-        foreign key (LEAD_UNITS)
+        foreign key (LEAD_UNITS_ID)
         references Unit(UNIT_ID),
     constraint fk_AirQualityDataCounty_MethodID_NO2
-        foreign key (NO2_METHOD)
+        foreign key (NO2_METHOD_ID)
         references Method(METHOD_ID),
     constraint fk_AirQualityDataCounty_MetricID_NO2
-        foreign key (NO2_METRIC)
+        foreign key (NO2_METRIC_ID)
         references Metric(METRIC_ID),
     constraint fk_AirQualityDataCounty_UnitID_NO2
-        foreign key (NO2_UNITS)
+        foreign key (NO2_UNITS_ID)
         references Unit(UNIT_ID),
     constraint fk_AirQualityDataCounty_MethodID_OZONE
-        foreign key (OZONE_METHOD)
+        foreign key (OZONE_METHOD_ID)
         references Method(METHOD_ID),
     constraint fk_AirQualityDataCounty_MetricID_OZONE
-        foreign key (OZONE_METRIC)
+        foreign key (OZONE_METRIC_ID)
         references Metric(METRIC_ID),
     constraint fk_AirQualityDataCounty_UnitID_OZONE
-        foreign key (OZONE_UNITS)
+        foreign key (OZONE_UNITS_ID)
         references Unit(UNIT_ID),
     constraint fk_AirQualityDataCounty_MethodID_PM10
-        foreign key (PM10_METHOD)
+        foreign key (PM10_METHOD_ID)
         references Method(METHOD_ID),
     constraint fk_AirQualityDataCounty_MetricID_PM10
-        foreign key (PM10_METRIC)
+        foreign key (PM10_METRIC_ID)
         references Metric(METRIC_ID),
     constraint fk_AirQualityDataCounty_UnitID_PM10
-        foreign key (PM10_UNITS)
+        foreign key (PM10_UNITS_ID)
         references Unit(UNIT_ID),
     constraint fk_AirQualityDataCounty_MethodID_PM25
-        foreign key (PM25_METHOD)
+        foreign key (PM25_METHOD_ID)
         references Method(METHOD_ID),
     constraint fk_AirQualityDataCounty_MetricID_PM25
-        foreign key (PM25_METRIC)
+        foreign key (PM25_METRIC_ID)
         references Metric(METRIC_ID),
     constraint fk_AirQualityDataCounty_UnitID_PM25
-        foreign key (PM25_UNITS)
+        foreign key (PM25_UNITS_ID)
         references Unit(UNIT_ID),
     constraint fk_AirQualityDataCounty_MethodID_SO2
-        foreign key (SO2_METHOD)
+        foreign key (SO2_METHOD_ID)
         references Method(METHOD_ID),
     constraint fk_AirQualityDataCounty_MetricID_SO2
-        foreign key (SO2_METRIC)
+        foreign key (SO2_METRIC_ID)
         references Metric(METRIC_ID),
     constraint fk_AirQualityDataCounty_UnitID_SO2
-        foreign key (SO2_UNITS)
+        foreign key (SO2_UNITS_ID)
         references Unit(UNIT_ID),
     constraint uq_AirQualityDataCounty_CountyID_YEAR
         unique (COUNTY_ID,YEAR)
@@ -189,13 +191,13 @@ create table CensusIndustryData(
     COUNTY_ID int not null, --fk
     YEAR int not null,
     NAICS2012_LABEL nvarchar(72) not null, --we can reduce this later
-    FIRMALL bigint not null,
-    RCPALL float not null,
-    FIRMPDEMP float not null,
-    RCPPDEMP float not null,
-    EMP nvarchar(26), --we can reduce this later
-    FIRMNOPD float not null,
-    RCPNOPD float not null,
+    FIRMALL bigint null,
+    RCPALL float null,
+    FIRMPDEMP float null,
+    RCPPDEMP float null,
+    EMP bigint null, --we can reduce this later
+    FIRMNOPD float null,
+    RCPNOPD float null,
     constraint fk_CensusIndustryData_CountyID
         foreign key (COUNTY_ID)
         references County(COUNTY_ID),
