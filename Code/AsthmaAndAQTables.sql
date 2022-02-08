@@ -20,7 +20,7 @@ create table State(
 
 create table County(
     COUNTY_ID int primary key identity(1,1),
-    COUNTY_NAME varchar(14) not null, --Northumberland
+    COUNTY_NAME varchar(100) not null, --Aleutians West Census Area
     STATE_ID int not null,
     constraint fk_County_StateID
         foreign key (STATE_ID)
