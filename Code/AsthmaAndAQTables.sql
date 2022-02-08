@@ -169,7 +169,7 @@ create table AirQualityDataCounty (
 
 create table CAAsthmaData(
     ASTHMA_ID int primary key identity(1,1),
-    COUNTY_ID int not null, --fk
+    COUNTY_ID int null, --fk
     YEAR int not null,
     NUM_ED_VISITS int not null,
     AGE_ADJ_ED_VISITS float not null,
@@ -195,10 +195,10 @@ create table CensusIndustryData(
     RCPPDEMP float not null,
     EMP nvarchar(26), --we can reduce this later
     FIRMNOPD float not null,
-    RCPNOPD float not null
+    RCPNOPD float not null,
     constraint fk_CensusIndustryData_CountyID
         foreign key (COUNTY_ID)
-        references County(COUNTY_ID)
+        references County(COUNTY_ID),
     constraint uq_CensusIndustryData_CountyID_YEAR
         unique (COUNTY_ID,YEAR,NAICS2012_LABEL)
 );
