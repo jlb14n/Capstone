@@ -13,7 +13,7 @@ drop table if exists Unit
 create table State(
     STATE_ID int primary key identity(1,1),
     STATE_ABBR varchar(2) null,
-    STATE_NAME varchar(13) not null --Massachusetts
+    STATE_NAME varchar(20) not null --District of Columbia
     constraint uq_State_StateName
         unique(STATE_NAME)
 );
