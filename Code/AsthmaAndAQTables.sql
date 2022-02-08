@@ -1,19 +1,21 @@
 use [Jadr-SQL-Database]
 
-drop table if exists State
-drop table if exists County
-drop table if exists Method
-drop table if exists Metric
-drop table if exists Unit
 drop table if exists CAAsthmaData
 drop table if exists CAAirQualityDataCounty
 drop table if exists AirQualityDataCounty
 drop table if exists CensusIndustryData
+drop table if exists County
+drop table if exists State
+drop table if exists Method
+drop table if exists Metric
+drop table if exists Unit
 
 create table State(
     STATE_ID int primary key identity(1,1),
-    STATE_ABBR varchar(2) not null,
+    STATE_ABBR varchar(2) null,
     STATE_NAME varchar(13) not null --Massachusetts
+    constraint uq_State_StateName
+        unique(STATE_NAME)
 );
 
 create table County(
@@ -22,17 +24,23 @@ create table County(
     STATE_ID int not null,
     constraint fk_County_StateID
         foreign key (STATE_ID)
-        references State(STATE_ID)
+        references State(STATE_ID),
+    constraint uq_County_CountyName_StateID
+        unique (COUNTY_NAME,STATE_ID)
 );
 
 create table Method(
     METHOD_ID int primary key identity(1,1),
     METHOD_NAME varchar(110) not null
+    constraint uq_Method_MethodName
+        unique (METHOD_NAME)
 );
 
 create table Metric(
     METRIC_ID int primary key identity(1,1),
     METRIC_NAME varchar(68) not null
+    constraint uq_Metric_MetricName
+        unique (METRIC_NAME)
 );
 
 create table Unit(
