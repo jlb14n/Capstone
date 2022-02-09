@@ -31,21 +31,21 @@ create table County(
 
 create table Method(
     METHOD_ID int primary key identity(1,1),
-    METHOD_NAME varchar(110) null
+    METHOD_NAME varchar(110) COLLATE SQL_Latin1_General_CP1_CS_AS null
     constraint uq_Method_MethodName
         unique (METHOD_NAME)
 );
 
 create table Metric(
     METRIC_ID int primary key identity(1,1),
-    METRIC_NAME varchar(68) null
+    METRIC_NAME varchar(68) COLLATE SQL_Latin1_General_CP1_CS_AS null,
     constraint uq_Metric_MetricName
         unique (METRIC_NAME)
 );
 
 create table Unit(
     UNIT_ID int primary key identity(1,1),
-    UNIT_NAME varchar(29) null
+    UNIT_NAME varchar(29) COLLATE SQL_Latin1_General_CP1_CS_AS null
     constraint uq_Unit_UnitName
         unique (UNIT_NAME)
 );
