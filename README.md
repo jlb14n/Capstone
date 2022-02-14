@@ -5,4 +5,4 @@ M11 - Capstone Project for the Dev10 Data Professionals November 2021 Cohort
 
 --Code folder contains all code necessary for the Dashboard, including ETL and ML code.
 
---Datasets folder contains all the original datasets used, though it does not include some data that was pulled directly from APIs
+--Datasets folder contains all the original datasets used, though it does not include some data that was pulled directly from APIs.
