@@ -6,7 +6,7 @@ from sklearn.impute import KNNImputer
 from sklearn.preprocessing import StandardScaler
 
 loaded_model = load('C:/Users/jbartell/Desktop/Dev10/M11 Capstone/ML/random_forest_model_scaled.model')
-subset_to_keep = ["NO2","OZONE","PM25"]
+subset_to_keep = ["SO2","OZONE","PM25"]
 
 df = pd.DataFrame(dataset)
 columns=df.columns
