@@ -8,7 +8,8 @@ Additionally, we explored the correlation between various industries and air qua
 
 ## Folder and File Structure
 
-* Deliverables folder contains required pdf files created during planning ([exploratory questions](Deliverables/ExploratoryQuestions.pdf), [project management plan](Deliverables/ProjectManagementPlan.pdf), [napkin drawings](Deliverables/DashboardNapkinsAndFeedback.pdf)), the [ETL report](Deliverables/RepeatableETLReport.pdf), the [project executive summary](Deliverables/ProjectExecutiveSummary.pdf), and the [presentation slides](Deliverables/CapstonePresentationSlides.pdf). It also includes the original "Project Specifications" folder made during the pre-planning phase of this project.
+* Deliverables folder contains required pdf files created during planning ([exploratory questions](Deliverables/ExploratoryQuestions.pdf), [project management plan](Deliverables/ProjectManagementPlan.pdf), [napkin drawings](Deliverables/DashboardNapkinsAndFeedback.pdf)), the [ETL report](Deliverables/RepeatableETLReport.pdf), and the [project executive summary](Deliverables/ProjectExecutiveSummary.pdf). 
+  * ![Presentation](Code/MachineLearning/Graphics/Untitled.png) The final [presentation slides](Deliverables/CapstonePresentationSlides.pdf) can be downloaded as a PDF. It also includes the original "Project Specifications" folder made during the pre-planning phase of this project.
 
 * Code folder contains all code necessary for the Dashboard, including ETL and ML code.
 
@@ -41,6 +42,6 @@ The [final selected model](Code/MachineLearning/Final_Machine_Learning.ipynb) is
 The final model performed well on both the training and testing datasets. Despite this, the underlying data is likely influenced by many confounding factors and is sparse. The performance of the model is likely weak on data outside of the training and testing sets.
 ![Training Performance](Code/MachineLearning/Graphics/training.svg)
 
-![Testing Performance](Code/MachineLearning/Graphics/testing.png)
+![Testing Performance](Code/MachineLearning/Graphics/testing.svg)
 
-The other combinations of algorithms, predictors, and imputation are evaluated in the files "MachineLearning\Other Machine Learning.ipynb", "MachineLearning\Other Machine Learning-OzonePM25.ipynb", "MachineLearning\Other Machine Learning_BASIC,ipynb", "MachineLearning\asthma_predictions_linear+lasso.ipynb," and "MachineLearning\RandomForest_KNearestNeighbors.ipynb."
+The other combinations of algorithms, predictors, and imputation are evaluated in the files [Other Machine Learning.ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning.ipynb), [Other Machine Learning-OzonePM25.ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning-OzonePM25.ipynb), [Other Machine Learning_BASIC,ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning_BASIC.ipynb), [asthma_predictions_linear+lasso.ipynb](Code/MachineLearning/Old%20Models/asthma_predictions_linear+lasso.ipynb), and [RandomForest_KNearestNeighbors.ipynb](Code/MachineLearning/Old%20Models/RandomForest_KNearestNeighbors.ipynb).
