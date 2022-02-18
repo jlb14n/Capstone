@@ -12,7 +12,7 @@ Additionally, we explored the correlation between various industries and air qua
   ![Presentation](Code/MachineLearning/Graphics/Jadr%20Health%20Insights%20(Group%206)%20-%20Capstone%20Project.png)
   * The final [presentation slides](Deliverables/CapstonePresentationSlides.pdf) can be downloaded as a PDF. 
 
-  ![Power BI](Code/MachineLearning/Graphics/Untitled.png)
+  ![Power BI](Code/MachineLearning/Graphics/PowerBI.png)
   * The [Power BI report](Deliverables/PowerBIReport.pbix) is available to run in Power BI on your desktop.
   
 * Code folder contains all code necessary for the Dashboard, including ETL and ML code.
