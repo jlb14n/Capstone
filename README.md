@@ -15,7 +15,9 @@ Additionally, we explored the correlation between various industries and air qua
   ![Power BI](Code/MachineLearning/Graphics/PowerBI.png)
   * The [Power BI report](Deliverables/PowerBIReport.pbix) is available to run in Power BI on your desktop.
   
-* Code folder contains all code necessary for the Dashboard, including ETL and ML code.
+* Code folder contains all code necessary to support the Dashboard and analysis:
+  * The ETL [Databricks scripts](https://github.com/jlb14n/Capstone/blob/36a705a8fc01b4b377eeda6ace3567a303d91c62/Code/ETL_DataBricks)
+  * The Power BI machine learning predictor [power query script](Code/MachineLearning/PowerBI_Scripts/PowerBI%20ML%20Power%20Query%20Script.py).
 
 * Datasets folder contains examples of the original datasets used. Only [asthma emergency department visit data](Datasets/annual_aqi_by_cbsa_2021/annual_aqi_by_cbsa_2021.csv) is used directly from the file stored here. All others, [Census](Datasets/ABSCS2019.AB1900CSA03_2022-01-31T120751/ABSCS2019.AB1900CSA03_data_with_overlays_2022-01-31T120624.csv) and EPA air quality data, are downloaded directly from the cloud using an API when needed.
 
@@ -48,4 +50,4 @@ The final model performed well on both the training and testing datasets. Despit
 
 ![Testing Performance](Code/MachineLearning/Graphics/testing.svg)
 
-The other combinations of algorithms, predictors, and imputation are evaluated in the files [Other Machine Learning.ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning.ipynb), [Other Machine Learning-OzonePM25.ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning-OzonePM25.ipynb), [Other Machine Learning_BASIC,ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning_BASIC.ipynb), [asthma_predictions_linear+lasso.ipynb](Code/MachineLearning/Old%20Models/asthma_predictions_linear+lasso.ipynb), and [RandomForest_KNearestNeighbors.ipynb](Code/MachineLearning/Old%20Models/RandomForest_KNearestNeighbors.ipynb).
+The other combinations of algorithms, predictors, and imputation are evaluated in the files [Other Machine Learning.ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning.ipynb), [Other Machine Learning-OzonePM25.ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning-OzonePM25.ipynb), [Other Machine Learning_BASIC,ipynb](Code/MachineLearning/Old%20Models/Other%20Machine%20Learning_BASIC.ipynb), [asthma_predictions_linear+lasso.ipynb](Code/MachineLearning/Old%20Models/asthma_predictions_linear+lasso.ipynb), and [RandomForest_KNearestNeighbors.ipynb](Code/MachineLearning/Old%20Models/RandomForest_KNearestNeighbors.ipynb). [Comparison of the models tested](Code/MachineLearning/MachineLearningResults.xlsx) is tracked in an Excel file.
