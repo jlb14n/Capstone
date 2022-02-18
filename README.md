@@ -39,8 +39,8 @@ The goal is to predict the rate of emergency room visits based on air quality co
 The [final selected model](Code/MachineLearning/Final_Machine_Learning.ipynb) is a voting regressor using tuned AdaBoost and Support Vector Regression models. The [trained model](Code/MachineLearning/voting_1_SO2_scaled_dumpnulls.model) is available as a [joblib](https://joblib.readthedocs.io/en/latest/persistence.html#persistence) dump to load into the Power BI report for prediction. The input features are standardized before training due to the requirements for the SVR algorithm. Any data passed to the model for prediction must be similarly scaled. The [scaling factors](Code/MachineLearning/X_train_scaled_dropnulls.json) (mean and variance for each feature where the value is scaled by (X - mean)/sqrt(variance) )for the final selected model are available to download.
 
 The final model performed well on both the training and testing datasets. Despite this, the underlying data is likely influenced by many confounding factors and is sparse. The performance of the model is likely weak on data outside of the training and testing sets.
-![Training Performance](Code/MachineLearning/Graphics/training.svg)
+![Training Performance](Code/MachineLearning/Graphics/training.png)
 
-![Testing Performance](Code/MachineLearning/Graphics/testing.svg)
+![Testing Performance](Code/MachineLearning/Graphics/testing.png)
 
 The other combinations of algorithms, predictors, and imputation are evaluated in the files "MachineLearning\Other Machine Learning.ipynb", "MachineLearning\Other Machine Learning-OzonePM25.ipynb", "MachineLearning\Other Machine Learning_BASIC,ipynb", "MachineLearning\asthma_predictions_linear+lasso.ipynb," and "MachineLearning\RandomForest_KNearestNeighbors.ipynb."
