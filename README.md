@@ -11,6 +11,7 @@ Additionally, we explored the correlation between various industries and air qua
 * Deliverables folder contains required pdf files created during planning ([exploratory questions](Deliverables/ExploratoryQuestions.pdf), [project management plan](Deliverables/ProjectManagementPlan.pdf), [napkin drawings](Deliverables/DashboardNapkinsAndFeedback.pdf)), the [ETL report](Deliverables/RepeatableETLReport.pdf), and the [project executive summary](Deliverables/ProjectExecutiveSummary.pdf). It also includes the original "Project Specifications" folder made during the pre-planning phase of this project.
   ![Presentation](Code/MachineLearning/Graphics/Jadr%20Health%20Insights%20(Group%206)%20-%20Capstone%20Project.png)
   * The final [presentation slides](Deliverables/CapstonePresentationSlides.pdf) can be downloaded as a PDF. 
+
   ![Power BI](Code/MachineLearning/Graphics/Untitled.png)
   * The [Power BI report](Deliverables/PowerBIReport.pbix) is available to run in Power BI on your desktop.
   
