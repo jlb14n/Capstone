@@ -25,7 +25,7 @@ Additionally, we explored the correlation between various industries and air qua
 
 The goal is to predict the rate of emergency room visits based on air quality conditions. Several machine learning algorithms were tested as were combinations of air quality parameters used as predictors and how to handle missing values. All machine learning algorithms used the [scikit learn](https://scikit-learn.org/stable/index.html) Python library version 1.0.2.
 
-* Algorithms
+* Scikit Learn Algorithm Documentation
   * [Linear Regression](https://scikit-learn.org/stable/modules/linear_model.html#ordinary-least-squares) - Ordinary Least Squares regression that fits a linear model minimizing the residual sum of squares.
   * [Lasso Regression](https://scikit-learn.org/stable/modules/linear_model.html#lasso) - A linear model that prefers solutions with fewer non-zero coefficients, thus reducing the feature space to the most important features. 
   * [Adaboost](https://scikit-learn.org/stable/modules/ensemble.html#adaboost) - An ensemble method that takes successive weak estimators to reduce the overall bias of the prediction. Adaboost combines estimators iteratively by adjusting weights to favor samples not well fit. 
